@@ -18,7 +18,7 @@ public class CalculadoraDeImpostoTest {
 										.comSalarioBaseDe(3000.0)
 										.build();
 		
-		CalculadoraDeSalario mock = Mockito.mock(CalculadoraDeSalario.class);
+		CalculadoraDeSalario mock = Mockito.mock(CalculadoraDeSalario2005.class);
 		Mockito.when(mock.calcular(funcionario)).thenReturn(3000.0);
 		
 		CalculadoraDeImposto calcImposto = new CalculadoraDeImposto(mock);
