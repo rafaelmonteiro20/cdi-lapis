@@ -1,5 +1,6 @@
 package com.lapis.service;
 
+import java.util.Date;
 import java.util.List;
 
 import com.lapis.model.Funcionario;
@@ -8,8 +9,9 @@ import com.lapis.model.Funcionario;
 public class SimuladorCalculadoraFolhaPagamento implements CalculadoraFolhaPagamento {
 
 	@Override
-	public void calculaFolha(List<Funcionario> funcionarios) {
+	public Folha calculaFolha(List<Funcionario> funcionarios) {
 		System.out.println("Simulador...");
+		return new Folha(new Date(), 1000.0, funcionarios);
 	}
 
 }

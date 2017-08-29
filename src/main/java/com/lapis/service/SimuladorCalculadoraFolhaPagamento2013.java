@@ -9,8 +9,9 @@ import com.lapis.model.PlanoDeCargos;
 public class SimuladorCalculadoraFolhaPagamento2013 implements CalculadoraFolhaPagamento {
 
 	@Override
-	public void calculaFolha(List<Funcionario> funcionarios) {
-		System.out.println("Simulador...");
+	public Folha calculaFolha(List<Funcionario> funcionarios) {
+		System.out.println("Simulador 2013...");
+		return null;
 	}
 
 }

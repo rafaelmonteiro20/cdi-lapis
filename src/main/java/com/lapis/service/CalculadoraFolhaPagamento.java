@@ -6,6 +6,6 @@ import com.lapis.model.Funcionario;
 
 public interface CalculadoraFolhaPagamento {
 
-	void calculaFolha(List<Funcionario> funcionarios);
+	Folha calculaFolha(List<Funcionario> funcionarios);
 	
 }
