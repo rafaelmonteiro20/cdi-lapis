@@ -1,13 +1,16 @@
 package com.lapis.controller;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.lapis.builder.FuncionarioBuilder;
+import com.lapis.interceptor.Auditavel;
 import com.lapis.model.Funcionario;
 import com.lapis.service.CalculadoraDeImposto;
 
 @Named
+@RequestScoped
 public class CalculadoraImpostoBean {
 
 	@Inject
@@ -17,10 +20,10 @@ public class CalculadoraImpostoBean {
 	
 	private double imposto;
 	
-
+	
 	public void calcular() {
 		Funcionario funcionario = new FuncionarioBuilder()
-										.comNome("Josimar Júnior")
+										.comNome("Josimar")
 										.admitidoEm("26/06/2017")
 										.comSalarioBaseDe(salarioBase)
 										.build();

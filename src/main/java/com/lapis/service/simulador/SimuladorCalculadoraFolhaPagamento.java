@@ -1,9 +1,11 @@
-package com.lapis.service;
+package com.lapis.service.simulador;
 
 import java.util.Date;
 import java.util.List;
 
 import com.lapis.model.Funcionario;
+import com.lapis.service.CalculadoraFolhaPagamento;
+import com.lapis.service.Folha;
 
 @Simulador
 public class SimuladorCalculadoraFolhaPagamento implements CalculadoraFolhaPagamento {
