@@ -17,6 +17,8 @@ public class Usuario {
 	private String nome;
 
 	private String senha;
+	
+	private boolean ativo;
 
 	
 	public Integer getId() {
@@ -41,6 +43,18 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	
+	public boolean isAtivo() {
+		return ativo;
+	}
+	
+	public void ativar() {
+		this.ativo = true;
+	}
+	
+	public void desativar() {
+		this.ativo = false;
 	}
 
 	@Override

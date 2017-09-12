@@ -5,8 +5,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.lapis.dao.UsuarioDAO;
 import com.lapis.model.Usuario;
+import com.lapis.service.usuario.UsuarioService;
 import com.lapis.util.MessagesHelper;
 
 @Named
@@ -14,7 +14,7 @@ import com.lapis.util.MessagesHelper;
 public class UsuarioBean {
 
 	@Inject
-	private UsuarioDAO usuarioDAO;
+	private UsuarioService service;
 	
 	@Inject
 	private MessagesHelper helper;
@@ -27,8 +27,14 @@ public class UsuarioBean {
 	}
 	
 	public void salvar() {
-		usuarioDAO.salvar(usuario);
+		service.cadastrar(usuario);
 		helper.addInfoMessage("Usuário salvo com sucesso!");
+		novo();
+	}
+	
+	public void demitir() {
+		service.demitir(usuario);
+		helper.addInfoMessage("Usuário desativado com sucesso!");
 		novo();
 	}
 	

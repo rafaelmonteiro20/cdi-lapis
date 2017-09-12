@@ -5,7 +5,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.lapis.builder.FuncionarioBuilder;
-import com.lapis.interceptor.Auditavel;
 import com.lapis.model.Funcionario;
 import com.lapis.service.CalculadoraDeImposto;
 
